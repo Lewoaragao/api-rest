@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.lang.NonNull;
+
 @Entity
 @Table(name = "TB_PRODUTO")
 public class Produto implements Serializable {
@@ -19,8 +21,13 @@ public class Produto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@NonNull
 	private String nome;
+	
+	@NonNull
 	private BigDecimal quantidade;
+	
+	@NonNull
 	private BigDecimal valor;
 	
 	public long getId() {
