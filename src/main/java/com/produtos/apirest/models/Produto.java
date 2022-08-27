@@ -8,27 +8,28 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
-import org.springframework.lang.NonNull;
 
 @Entity
-@Table(name = "TB_PRODUTO")
-public class Produto implements Serializable {
-
+@Table(name="TB_PRODUTO")
+public class Produto implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	@NonNull
+	@NotNull
 	private String nome;
 	
-	@NonNull
+	@NotNull
 	private BigDecimal quantidade;
 	
-	@NonNull
+	@NotNull
 	private BigDecimal valor;
+	
 	
 	public long getId() {
 		return id;
@@ -54,4 +55,7 @@ public class Produto implements Serializable {
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
+	
+	
+
 }
