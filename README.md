@@ -1,4 +1,4 @@
-# api-rest-spring
+# api-rest-spring-produtos
 
 API para cadastro de produtos.
 
