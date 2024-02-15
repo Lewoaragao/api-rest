@@ -1,0 +1,4 @@
+1. criar Dockerfile
+2. git add .
+3. git commit -m "Deploy no render"
+4. git push
