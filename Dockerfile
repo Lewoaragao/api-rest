@@ -13,6 +13,4 @@ EXPOSE 8080
 
 COPY --from=build /target/api-rest-0.0.1-SNAPSHOT.jar app.jar
 
-RUN java -Xmx1024m -Xms512m -jar app.jar
-
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
